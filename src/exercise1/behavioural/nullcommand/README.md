@@ -30,4 +30,4 @@ When a YouTube ad starts, the **Skip Ad button appears but is inactive**.
 ---
 
 ## 📊 UML Diagram  
-![NULL COMMAND UML](NullCommandUML.jpg)  
+![NULL COMMAND UML](NullCommandUML.png)  
