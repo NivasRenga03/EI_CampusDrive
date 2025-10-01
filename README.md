@@ -1,58 +1,154 @@
-# Design Patterns Implementation
+##  Overview
 
-This repository contains implementations of various design patterns in Java, organized by category (Behavioral, Creational, Structural). Each pattern includes source code and UML diagrams for better understanding.
 
-## Behavioral Patterns
+- This repository demonstrates design patterns in Java, categorized as **Creational**, **Structural**, and **Behavioral**. 
+  
+- Each example includes a real-world inspired **use case**, clean implementation, and extensible design.
 
-### Command Pattern
-The Command pattern encapsulates a request as an object, allowing parameterization of clients with queues, requests, and operations. It decouples the sender from the receiver.
+- And a simulation of a **Smart Office Facility** implemented in Java, demonstrating the use of three key design patterns:
+  - **Singleton**
+  - **Command**
+  - **Observer**
 
-**Use Case:** Media player controls (play, pause, rewind) where commands can be queued or undone.
 
-![Command UML](src/exercise1/behaviour/command/CommandUML.jpg)
 
-### Null Command Pattern (Additional Learning)
-The Null Command pattern provides a default do-nothing behavior for commands, avoiding null checks and providing a safe fallback.
+---
+## 🎭 Behavioral Patterns
 
-**Use Case:** Handling button clicks in a UI where some buttons may not have actions assigned, preventing null pointer exceptions.
+### 1. Command Pattern – YouTube Player Actions
+**Use Case:**  
+Simulating a **YouTube Player** where buttons perform actions like Play, Pause, Rewind.  
 
-![Null Command UML](src/exercise1/behaviour/nullcommand/NullCommandUML.png)
+**Description:**  
+- **Invoker:** `YouTubeAppUI` – UI buttons  
+- **Command Interface:** `Command`  
+- **Concrete Commands:** `PlayCommand`, `PauseCommand`, `RewindCommand`  
+- **Receiver:** `YouTubePlayer`  
+- **Client:** `Main` – binds commands to UI buttons  
 
-### Observer Pattern
-The Observer pattern defines a one-to-many dependency between objects, so when one object changes state, all its dependents are notified.
+**Source:**  
+[`exercise1.behaviour.command`](./src/exercise1/behaviour/command)
 
-**Use Case:** ICU patient monitoring system where multiple observers (doctors, nurses, family) are notified of patient status changes.
+---
 
-![Observer UML](src/exercise1/behaviour/observer/ObserverUML.png)
+### 2. Null Object Pattern – YouTube Skip Ad(Additional Learning)
+**Use Case:**  
+Simulating a **YouTube Skip Ad button** that is **visible but inactive** for the first 5 seconds, then enabled.  
 
-## Creational Patterns
+**Description:**  
+- **Invoker:** `SkipAdButton`  
+- **Command Interface:** `Command`  
+- **Concrete Commands:** `NullCommand` (inactive), `SkipCommand` (active)  
+- **Client:** `YouTubeAdDemo`  
 
-### Factory Pattern
-The Factory pattern provides an interface for creating objects in a superclass, allowing subclasses to alter the type of objects created.
+**Source:**  
+[`exercise1.behaviour.nullcommand`](./src/exercise1/behaviour/nullcommand)
 
-**Use Case:** Notification system that creates different types of notifications (email, SMS, push) based on user preference.
+---
 
-![Factory UML](src/exercise1/creational/factory/FactoryUML.png)
+### 3. Observer Pattern – ICU Patient Monitoring
+**Use Case:**  
+An **ICU Monitoring System** where doctors, nurses, and family are notified of changes in patient vitals.  
 
-### Builder Pattern
-The Builder pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+**Description:**  
+- **Subject:** `ICUPatient` – manages vital signs and observers  
+- **Observer Interface:** `ICUObserver`  
+- **Concrete Observers:** `DoctorObserver`, `NurseObserver`, `FamilyObserver`  
+- **Client:** `Main` – simulates patient condition changes  
 
-**Use Case:** Building event objects with optional fields like title, date, location, and description.
+**Source:**  
+[`exercise1.behaviour.observer`](./src/exercise1/behaviour/observer)
 
-![Builder UML](src/exercise1/creational/builder/BuilderUML.png)
+---
+## 🏗️ Creational Patterns
 
-## Structural Patterns
+### 1. Factory Pattern – Notification System
+**Use Case:**  
+A system that sends different types of notifications: **Email, SMS, Push**.  
+The client requests a type, and the factory creates the correct notification object.
 
-### Decorator Pattern
-The Decorator pattern allows behavior to be added to an individual object dynamically, without affecting the behavior of other objects from the same class.
+**Description:**  
+- **Product Interface:** `Notification`  
+- **Concrete Products:** `EmailNotification`, `SMSNotification`, `PushNotification`  
+- **Factory:** `NotificationFactory` – encapsulates object creation logic  
+- **Client:** `Main` – requests notifications without knowing concrete classes  
 
-**Use Case:** User access control system where permissions (admin, editor) are layered on a basic user account.
+**Source:**  
+[`exercise1.creational.factory`](./src/exercise1/creational/factory)
 
-![Decorator UML](src/exercise1/structural/decorator/DecoratorUML.png)
+---
 
-### Facade Pattern
-The Facade pattern provides a simplified interface to a complex subsystem, making it easier to use.
+### 2. Builder Pattern – Event Management
+**Use Case:**  
+An **Event Management System** where events can have optional and mandatory fields (e.g., tech conference with full details, birthday party with minimal details).  
 
-**Use Case:** Travel booking system that hides the complexity of booking flights, hotels, and visas behind a single interface.
+**Description:**  
+- **Product:** `Event` – complex object  
+- **Builder:** `EventBuilder` – step-by-step construction  
+- **Client:** `Main` – builds events with varying details  
 
-![Facade UML](src/exercise1/structural/facade/FacadeUML.png)
+**Source:**  
+[`exercise1.creational.builder`](./src/exercise1/creational/builder)
+
+---
+
+## 🏛️ Structural Patterns
+
+### 1. Decorator Pattern – User Access Management
+**Use Case:**  
+A **User Access System** where roles (BasicUser, Editor, Admin) can be combined dynamically.  
+
+**Description:**  
+- **Component:** `Permission`  
+- **Concrete Component:** `BasicUser` (read access)  
+- **Decorators:** `AdminAccess`, `EditorAccess` (add create, delete, edit dynamically)  
+- **Client:** `Main` – composes roles at runtime  
+
+**Source:**  
+[`exercise1.structural.decorator`](./src/exercise1/structural/decorator)
+
+---
+
+### 2. Facade Pattern – Travel Agent
+**Use Case:**  
+A **Travel Agent** that simplifies booking an overseas trip: handles **Visa, Tickets, Hotel, Transport, Sightseeing** behind one interface.  
+
+**Description:**  
+- **Subsystems:** `VisaProcessing`, `TicketBooking`, `Lodging`, `LocalTransport`, `SightSeeing`  
+- **Facade:** `TravelAgentFacade` – provides a single unified method `bookOverseasTrip()`  
+- **Client:** `Main` – books a trip in one call  
+
+**Source:**  
+[`exercise1.structural.facade`](./src/exercise1/structural/facade)
+
+---
+
+## 🏢 Smart Office Facility
+
+This project is a simulation of a Smart Office Facility implemented in Java. It demonstrates the use of three key design patterns: Singleton, Command, and Observer.
+
+### Key Features
+- User authentication with role-based access control
+- Room configuration and management
+- Booking and cancellation of rooms
+- Occupancy tracking
+- Automatic cancellations based on inactivity
+- Statistics and monitoring
+- Email notifications for cancellations
+
+### Design Patterns Used
+- **Singleton**: For OfficeConfiguration, UserSession, and Logger
+- **Command**: Encapsulates actions into individual command classes
+- **Observer**: Notifies observers (ACController, LightController) on room state changes
+
+### Technologies
+- Java JDK 8 or higher
+- Command-line interface for interaction
+
+### Purpose
+This project showcases clean, maintainable code using design patterns, handling real-world edge cases like concurrent bookings, invalid inputs, and role restrictions.
+
+### Links
+- [Project Repository on GitHub](https://github.com/NivasRenga03/EI_CampusDrive/tree/main/Smart_Office_Facility)
+- [Detailed README](Smart_Office_Facility/README.md)
+- [Design Patterns and Usage Guide](DesignPatterns_and_Usage.md)
