@@ -39,5 +39,5 @@ Imagine you want to travel abroad:
 ---
 
 ## 📊 UML Diagram  
-![Facade UML](FacadeUML.jpg)  
+![Facade UML](FacadeUML.png)  
 
