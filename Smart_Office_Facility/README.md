@@ -1,6 +1,6 @@
-# 🏢✨Smart Office Facility
+# Smart Office Facility
 
-## 🔍 Overview
+## Overview
 
 This project is an Smart Office Facility that allows users to manage room bookings, configure office settings, and monitor room statuses. The system uses several design patterns, including Singleton, Command, and Observer patterns, to ensure a scalable and maintainable architecture.
 
@@ -38,7 +38,7 @@ The Observer pattern is used to notify multiple objects about changes in the sta
 - **[`ACController`](src/observers/ACController.java)**: Controls the air conditioning based on room status.
 - **[`LightController`](src/observers/LightController.java)**: Controls the lighting based on room status.
 
-## 📌Features
+## Features
 
 ### User Authentication
 
