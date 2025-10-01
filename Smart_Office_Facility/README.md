@@ -1,6 +1,6 @@
-# Smart Office Facility
+# 🏢✨Smart Office Facility
 
-## Overview
+##🔍 Overview
 
 This project is an Smart Office Facility that allows users to manage room bookings, configure office settings, and monitor room statuses. The system uses several design patterns, including Singleton, Command, and Observer patterns, to ensure a scalable and maintainable architecture.
 
@@ -38,7 +38,7 @@ The Observer pattern is used to notify multiple objects about changes in the sta
 - **[`ACController`](src/observers/ACController.java)**: Controls the air conditioning based on room status.
 - **[`LightController`](src/observers/LightController.java)**: Controls the lighting based on room status.
 
-## Features
+## 📌Features
 
 ### User Authentication
 
@@ -78,11 +78,11 @@ The system manages rare but critical scenarios, including:
 
 1. Clone the repository:
     ```sh
-    git clone 
+    git clone https://github.com/NivasRenga03/EI_CampusDrive/edit/main/Smart_Office_Facility
     ```
 2. Navigate to the project directory:
     ```sh
-    cd 'Mini Project (Smart Office Facility)'
+    cd 'Smart_Office_Facility'
     ```
 
 ### Running the Application
@@ -90,7 +90,7 @@ The system manages rare but critical scenarios, including:
 To compile the application, run:
 
 ```sh
-javac -d out src/**/*.java
+javac -d out -cp . src/models/*.java src/commands/*.java src/obs
 ```
 
 To start the application, run:
@@ -197,23 +197,18 @@ The system displays user-friendly error messages for:
 
 - Room count (non-positive).
 - Capacity (negative).
-- Time format (not HH:mm:ss).
+- Time format (HH:mm:ss).
 - Duration (negative or zero).
 - Room ID (non-existent).
-- Booking ID (non-existent).
 - Command (unknown).
 - Command format (wrong number of arguments).
 - Role (not admin or user).
-- Username (empty or null).
 - Negative occupant counts.
 - Adding occupants to unbooked rooms.
 - Max capacity not configured before adding occupants.
 - Room reconfiguration blocked if rooms have active bookings.
 - Insufficient occupants (<2) to mark room as occupied.
 - Booking ID not found.
-- Unauthorized cancellation of others' bookings.
-- Booking in the past.
-- Booking crosses midnight.
 - Overlapping bookings.
 - Notification/email delivery failures.
 
