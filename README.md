@@ -51,9 +51,6 @@ Simulates a **Skip Ad button** that remains inactive for the first 5 seconds bef
 
 ---
 
-
-
----
 ##  Creational Patterns
 
 ### 1. Factory Pattern – Notification System
