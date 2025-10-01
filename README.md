@@ -27,7 +27,19 @@ Simulates a **YouTube Player** where buttons perform actions like Play, Pause, a
 
 ---
 
-### 2. Null Object Pattern – YouTube Skip Ad(Additional Learning)
+### 2. Observer Pattern – ICU Patient Monitoring
+**Use Case:**  
+An **ICU Monitoring System** where doctors, nurses, and family are notified of changes in patient vitals.  
+
+**Description:**  
+An **ICU Monitoring System** that notifies doctors, nurses, and family of changes in patient vitals. The `ICUPatient` manages vital signs and observers, while concrete observers like `DoctorObserver` handle notifications. This pattern ensures timely updates on patient status.
+
+
+**Source:**  
+[`exercise1.behaviour.observer`](./src/exercise1/behaviour/observer)
+
+
+### 3. Null Object Pattern – YouTube Skip Ad(Additional Learning)
 **Use Case:**  
 Simulating a **YouTube Skip Ad button** that is **visible but inactive** for the first 5 seconds, then enabled.  
 
@@ -39,16 +51,7 @@ Simulates a **Skip Ad button** that remains inactive for the first 5 seconds bef
 
 ---
 
-### 3. Observer Pattern – ICU Patient Monitoring
-**Use Case:**  
-An **ICU Monitoring System** where doctors, nurses, and family are notified of changes in patient vitals.  
 
-**Description:**  
-An **ICU Monitoring System** that notifies doctors, nurses, and family of changes in patient vitals. The `ICUPatient` manages vital signs and observers, while concrete observers like `DoctorObserver` handle notifications. This pattern ensures timely updates on patient status.
-
-
-**Source:**  
-[`exercise1.behaviour.observer`](./src/exercise1/behaviour/observer)
 
 ---
 ##  Creational Patterns
