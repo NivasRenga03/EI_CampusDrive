@@ -1,12 +1,10 @@
-# 🏥 ICU Patient Monitoring System – Observer Pattern  
+#  ICU Patient Monitoring System – Observer Pattern  
 
-## 🎯 Use Case  
+##  Use Case  
 We simulate an **ICU patient monitoring system** where a patient’s vital signs are continuously tracked.  
 Observers such as **doctors, nurses, and family members** are automatically notified when the patient’s condition changes.  
 
----
-
-## 🔗 How the Use Case Aligns with the Pattern  
+## How the Use Case Aligns with the Pattern  
 
 - **Subject** → `ICUPatient` (maintains vital signs and observer list)  
 - **Observer Interface** → `ICUObserver` (defines `update()`)  
@@ -16,9 +14,7 @@ Observers such as **doctors, nurses, and family members** are automatically noti
   - `FamilyObserver` → notified to keep relatives informed  
 - **Client** → `Main` (registers observers and simulates changes in vital signs)  
 
----
-
-## 💡 Real-Time ICU Monitoring Scenario  
+##  Real-Time ICU Monitoring Scenario  
 
 Imagine **John Doe** is admitted to the ICU. His condition is constantly monitored:  
 
@@ -29,7 +25,5 @@ Imagine **John Doe** is admitted to the ICU. His condition is constantly monitor
 
 This ensures **timely communication**, enabling fast clinical interventions and reassurance for the family.  
 
----
-
-## 🖥️ UML Diagram  
-![OBSERVER UML](ObserverUML.jpg)  
+##  UML Diagram  
+![OBSERVER UML](ObserverUML.png)  
