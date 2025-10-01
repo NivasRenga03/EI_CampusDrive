@@ -37,4 +37,4 @@ The UI buttons don’t handle video logic directly — they delegate actions to 
 ---
 
 ## 📊 UML Diagram  
-![Command UML](CommandUML.jpg)  
+![Command UML](CommandUML.png)  
