@@ -20,7 +20,7 @@
 Simulating a **YouTube Player** where buttons perform actions like Play, Pause, Rewind.  
 
 **Description:**  
-Simulates a **YouTube Player** where buttons perform actions like Play, Pause, and Rewind. The `YouTubeAppUI` serves as the invoker, binding commands to UI buttons, while `YouTubePlayer` acts as the receiver. This structure allows for flexible command execution
+This simulation represents a YouTube Player where user interactions with buttons trigger various actions such as Play, Pause, and Rewind. The `YouTubeAppUI` functions as the invoker, linking commands to the corresponding UI buttons, while the `YouTubePlayer` serves as the receiver, executing these commands. This design pattern facilitates a flexible and extensible command execution mechanism.
 
 **Source:**  
 [`exercise1.behaviour.command`](./src/exercise1/behaviour/command)
@@ -38,7 +38,7 @@ An **ICU Monitoring System** that notifies doctors, nurses, and family of change
 **Source:**  
 [`exercise1.behaviour.observer`](./src/exercise1/behaviour/observer)
 
-
+---
 ### 3. Null Object Pattern – YouTube Skip Ad(Additional Learning)
 **Use Case:**  
 Simulating a **YouTube Skip Ad button** that is **visible but inactive** for the first 5 seconds, then enabled.  
@@ -60,6 +60,8 @@ The client requests a type, and the factory creates the correct notification obj
 
 **Description:**  
 A system that sends different types of notifications: **Email, SMS, Push**. The `NotificationFactory` encapsulates the creation logic, allowing clients to request notifications without knowing the specific classes. This promotes loose coupling and easier maintenance.
+
+
 **Source:**  
 [`exercise1.creational.factory`](./src/exercise1/creational/factory)
 
@@ -72,6 +74,8 @@ An **Event Management System** where events can have optional and mandatory fiel
 **Description:**  
 An **Event Management System** that supports both optional and mandatory fields for events. The `EventBuilder` allows for step-by-step construction of complex `Event` objects, providing flexibility in event creation. This pattern enhances clarity and usability in object creation
 .
+
+
 **Source:**  
 [`exercise1.creational.builder`](./src/exercise1/creational/builder)
 
